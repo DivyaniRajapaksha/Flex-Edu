@@ -1,3 +1,5 @@
+import 'package:app/Interfaces/home.dart';
+import 'package:app/Interfaces/register.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -73,7 +75,14 @@ class _LoginState extends State<Login> {
                         color: Colors.green,
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Home();
+                              }),
+                            );
+                          },
                           child: Center(
                             child: Text(
                               'LOGIN',
@@ -99,7 +108,12 @@ class _LoginState extends State<Login> {
                           borderRadius: BorderRadius.circular(20.0)),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).pop();
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return SignUp();
+                            }),
+                          );
                         },
                         child: 
                         
