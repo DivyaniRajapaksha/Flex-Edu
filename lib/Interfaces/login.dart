@@ -1,3 +1,4 @@
+import 'package:app/Interfaces/home.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -73,7 +74,14 @@ class _LoginState extends State<Login> {
                         color: Colors.green,
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Home();
+                              }),
+                            );
+                          },
                           child: Center(
                             child: Text(
                               'LOGIN',

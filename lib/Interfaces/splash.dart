@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:app/Interfaces/login.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutkart/utils/my_navigator.dart';
 
@@ -12,7 +13,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    //Timer(Duration(seconds: 5), () => MyNavigator.goToIntro(context));
+    Timer(
+        Duration(seconds: 5),
+        () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return Login();
+                }),
+              )
+            });
   }
 
   @override
@@ -66,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       padding: EdgeInsets.only(top: 20.0),
                     ),
                     Text(
-                     "we play healthy",
+                      "we play healthy",
                       softWrap: true,
                       textAlign: TextAlign.center,
                       style: TextStyle(
