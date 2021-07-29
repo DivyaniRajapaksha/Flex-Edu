@@ -38,15 +38,11 @@ class DetailsScreen extends StatelessWidget {
                           .copyWith(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
-                    Text(
-                      "3-10 MIN Course",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
                     SizedBox(height: 10),
                     SizedBox(
                       width: size.width * .6, // it just take 60% of total width
                       child: Text(
-                        "Live happier and healthier by learning the ",
+                        "Hey kido..!!! let's start an activity. Go ahead and select a session.",
                       ),
                     ),
                     SizedBox(
@@ -121,7 +117,7 @@ class SeassionCard extends StatelessWidget {
               10, // constraint.maxWidth provide us the available with for this widget
           // padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.orange[100],
             borderRadius: BorderRadius.circular(13),
             boxShadow: [
               BoxShadow(
@@ -133,7 +129,7 @@ class SeassionCard extends StatelessWidget {
             ],
           ),
           child: Material(
-            color: Colors.transparent,
+            color: isDone ? Colors.orange[400] : Colors.yellow[600],
             child: InkWell(
               onTap: press,
               child: Padding(
@@ -144,13 +140,13 @@ class SeassionCard extends StatelessWidget {
                       height: 42,
                       width: 43,
                       decoration: BoxDecoration(
-                        color: isDone ? kBlueColor : Colors.white,
+                        color: isDone ? Colors.white : Colors.white,
                         shape: BoxShape.circle,
-                        border: Border.all(color: kBlueColor),
+                        border: Border.all(color: Colors.orange[400]),
                       ),
                       child: Icon(
                         Icons.play_arrow,
-                        color: isDone ? Colors.white : kBlueColor,
+                        color: isDone ? Colors.orange[400] : Colors.orange[400],
                       ),
                     ),
                     SizedBox(width: 10),

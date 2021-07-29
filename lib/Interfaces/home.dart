@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
                       height: 52,
                       width: 52,
                       decoration: BoxDecoration(
-                        color: Colors.orange[200],
+                        color: Colors.yellow[600],
                         shape: BoxShape.circle,
                       ),
                       child: SvgPicture.asset("assets/icons/menu.svg"),
@@ -63,12 +63,26 @@ class Home extends StatelessWidget {
                         CategoryCard(
                           title: "Video Collection 1",
                           svgSrc: "assets/images/youtube.png",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return DetailsScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Video collection 2",
                           svgSrc: "assets/images/youtube.png",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return DetailsScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Video collection 3",
@@ -85,7 +99,14 @@ class Home extends StatelessWidget {
                         CategoryCard(
                           title: "Video collection 3",
                           svgSrc: "assets/images/youtube.png",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return DetailsScreen();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
