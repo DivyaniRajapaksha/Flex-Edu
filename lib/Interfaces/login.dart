@@ -1,4 +1,5 @@
 import 'package:app/Interfaces/home.dart';
+import 'package:app/Interfaces/register.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -75,7 +76,7 @@ class _LoginState extends State<Login> {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(builder: (context) {
                                 return Home();
@@ -107,7 +108,12 @@ class _LoginState extends State<Login> {
                           borderRadius: BorderRadius.circular(20.0)),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).pop();
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return SignUp();
+                            }),
+                          );
                         },
                         child: 
                         

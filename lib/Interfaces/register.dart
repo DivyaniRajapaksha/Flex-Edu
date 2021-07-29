@@ -1,3 +1,4 @@
+import 'package:app/Interfaces/login.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
@@ -138,7 +139,12 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.circular(20.0)),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).pop();
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return Login();
+                            }),
+                          );
                         },
                         child: 
                         
