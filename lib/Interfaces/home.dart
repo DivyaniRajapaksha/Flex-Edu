@@ -12,14 +12,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
+      //bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
             // Here the height of the container is 45% of our total height
             height: size.height * .45,
             decoration: BoxDecoration(
-              color: Color(0xFFF5CEB8),
+              color: Colors.orange[400],
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
                 image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
@@ -39,14 +39,14 @@ class Home extends StatelessWidget {
                       height: 52,
                       width: 52,
                       decoration: BoxDecoration(
-                        color: Color(0xFFF2BEA1),
+                        color: Colors.orange[200],
                         shape: BoxShape.circle,
                       ),
                       child: SvgPicture.asset("assets/icons/menu.svg"),
                     ),
                   ),
                   Text(
-                    "Good Mornign \nShishir",
+                    "Flex-Edu",
                     style: Theme.of(context)
                         .textTheme
                         .display1
@@ -61,18 +61,18 @@ class Home extends StatelessWidget {
                       mainAxisSpacing: 20,
                       children: <Widget>[
                         CategoryCard(
-                          title: "Diet Recommendation",
-                          svgSrc: "assets/icons/Hamburger.svg",
+                          title: "Video Collection 1",
+                          svgSrc: "assets/images/youtube.png",
                           press: () {},
                         ),
                         CategoryCard(
-                          title: "Kegel Exercises",
-                          svgSrc: "assets/icons/Excrecises.svg",
+                          title: "Video collection 2",
+                          svgSrc: "assets/images/youtube.png",
                           press: () {},
                         ),
                         CategoryCard(
-                          title: "Meditation",
-                          svgSrc: "assets/icons/Meditation.svg",
+                          title: "Video collection 3",
+                          svgSrc: "assets/images/youtube.png",
                           press: () {
                             Navigator.push(
                               context,
@@ -83,8 +83,8 @@ class Home extends StatelessWidget {
                           },
                         ),
                         CategoryCard(
-                          title: "Yoga",
-                          svgSrc: "assets/icons/yoga.svg",
+                          title: "Video collection 3",
+                          svgSrc: "assets/images/youtube.png",
                           press: () {},
                         ),
                       ],

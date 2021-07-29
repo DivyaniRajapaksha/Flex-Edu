@@ -20,7 +20,7 @@ class CategoryCard extends StatelessWidget {
       child: Container(
         // padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.orange[100],
           borderRadius: BorderRadius.circular(13),
           boxShadow: [
             BoxShadow(
@@ -40,7 +40,7 @@ class CategoryCard extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Spacer(),
-                  SvgPicture.asset(svgSrc),
+                  Image.asset(svgSrc),
                   Spacer(),
                   Text(
                     title,

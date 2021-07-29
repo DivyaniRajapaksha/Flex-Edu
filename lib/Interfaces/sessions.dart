@@ -1,21 +1,19 @@
-import 'package:app/widgets/bottom_nav_bar.dart';
-import 'package:app/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import '../constants.dart';
+import 'TrainingView.dart';
 
 class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
+      //bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
             height: size.height * .45,
             decoration: BoxDecoration(
-              color: kBlueLightColor,
+              color: Colors.orange[400],
               image: DecorationImage(
                 image: AssetImage("assets/images/meditation_bg.png"),
                 fit: BoxFit.fitWidth,
@@ -33,7 +31,7 @@ class DetailsScreen extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Meditation",
+                      "Video Collection",
                       style: Theme.of(context)
                           .textTheme
                           .display1
@@ -48,12 +46,12 @@ class DetailsScreen extends StatelessWidget {
                     SizedBox(
                       width: size.width * .6, // it just take 60% of total width
                       child: Text(
-                        "Live happier and healthier by learning the fundamentals of meditation and mindfulness",
+                        "Live happier and healthier by learning the ",
                       ),
                     ),
                     SizedBox(
-                      width: size.width * .5, // it just take the 50% width
-                      child: SearchBar(),
+                      width: size.width * .5,
+                      height: 180.0, // it just take the 50% width
                     ),
                     Wrap(
                       spacing: 20,
@@ -61,8 +59,12 @@ class DetailsScreen extends StatelessWidget {
                       children: <Widget>[
                         SeassionCard(
                           seassionNum: 1,
-                          isDone: true,
-                          press: () {},
+                          press: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return SessionSingle();
+                            }));
+                          },
                         ),
                         SeassionCard(
                           seassionNum: 2,
@@ -87,55 +89,6 @@ class DetailsScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 20),
-                    Text(
-                      "Meditation",
-                      style: Theme.of(context)
-                          .textTheme
-                          .title
-                          .copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 20),
-                      padding: EdgeInsets.all(10),
-                      height: 90,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          SvgPicture.asset(
-                            "assets/icons/Meditation_women_small.svg",
-                          ),
-                          SizedBox(width: 20),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "Basic 2",
-                                  style: Theme.of(context).textTheme.subtitle,
-                                ),
-                                Text("Start your deepen you practice")
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(10),
-                            child: SvgPicture.asset("assets/icons/Lock.svg"),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),

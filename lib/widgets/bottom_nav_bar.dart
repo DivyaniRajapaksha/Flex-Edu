@@ -22,7 +22,7 @@ class BottomNavBar extends StatelessWidget {
             svgScr: "assets/icons/calendar.svg",
           ),
           BottomNavItem(
-            title: "All Exercises",
+            title: "All Videos",
             svgScr: "assets/icons/gym.svg",
             isActive: true,
           ),
