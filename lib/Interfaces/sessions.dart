@@ -58,14 +58,16 @@ class DetailsScreen extends StatelessWidget {
                           press: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return SessionSingle();
+                              return SessionSingle(title: "Exercise 1",video: "https://firebasestorage.googleapis.com/v0/b/mobileapphackathon-e3c33.appspot.com/o/IMG_7503.MOV?alt=media&token=78d33fed-6caa-4b9e-aaa3-1d424822dc80",description: "Learn to do exercises within 15 seconds",tuteID: "D2GY1tW7suIJJigGo74h",ref: "https://storage.googleapis.com/mobileapphackathon-e3c33.appspot.com/Reports/D2GY1tW7suIJJigGo74h/D2GY1tW7suIJJigGo74h.csv",);
                             }));
                           },
                         ),
                         SeassionCard(
                           seassionNum: 2,
                           press: () {
-                            Naviga
+                            Navigator.push(context, MaterialPageRoute(builder:(context) {
+                              return SessionSingle(title: "Exercise 2",video: "https://firebasestorage.googleapis.com/v0/b/mobileapphackathon-e3c33.appspot.com/o/IMG_7503.MOV?alt=media&token=78d33fed-6caa-4b9e-aaa3-1d424822dc80",description: "Be active and healthy while watching this video", tuteID: "N1qsWAK1YsDv7jk68X2o",ref: "https://storage.googleapis.com/mobileapphackathon-e3c33.appspot.com/Reports/N1qsWAK1YsDv7jk68X2o/N1qsWAK1YsDv7jk68X2o.csv",done: false,);
+                            }));
                           },
                         ),
                         SeassionCard(

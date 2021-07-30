@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:app/Interfaces/home.dart';
 import 'package:app/Interfaces/login.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return Login();
+                  return Home();
                 }),
               )
             });
