@@ -113,23 +113,23 @@ class _LoginState extends State<Login> {
                                   }
 
 
-                                  _formKey.currentState.save();
-                                  if (_formKey.currentState.validate()) {
-                                    print(_formKey.currentState.validate().toString()+"2");
-                                  }
-                                  context.read<AuthService>().login(_username.text.trim(), _password.text.trim()).then((value) {
-                                    Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => Home()),
-                                    );
-                                  });
-
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(builder: (context) {
-                                      return Home();
-                                    }),
-                                  );
+                                  // _formKey.currentState.save();
+                                  // if (_formKey.currentState.validate()) {
+                                  //   print(_formKey.currentState.validate().toString()+"2");
+                                  // }
+                                  // context.read<AuthService>().login(_username.text.trim(), _password.text.trim()).then((value) {
+                                  //   Navigator.pushReplacement(
+                                  //     context,
+                                  //     MaterialPageRoute(builder: (context) => Home()),
+                                  //   );
+                                  // });
+                                  //
+                                  // Navigator.pushReplacement(
+                                  //   context,
+                                  //   MaterialPageRoute(builder: (context) {
+                                  //     return Home();
+                                  //   }),
+                                  // );
                                 },
                                 child: Center(
                                   child: Text(

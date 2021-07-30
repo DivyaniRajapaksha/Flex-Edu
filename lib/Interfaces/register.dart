@@ -133,7 +133,7 @@ class _SignUpState extends State<SignUp> {
                               color: Colors.green,
                               elevation: 7.0,
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   final String email =
                                       _emailextcontroller.text.trim();
                                   final String password =
@@ -157,12 +157,9 @@ class _SignUpState extends State<SignUp> {
                                           Fluttertoast.showToast(
                                               msg: "Passwords does not match");
                                         } else {
-                                          context
-                                              .read<AuthService>()
-                                              .register(email, password)
-                                              .then((value) async {
-                                            User user = FirebaseAuth.instance.currentUser;
 
+                                          try{
+                                            User user = FirebaseAuth.instance.currentUser;
 
                                             await FirebaseFirestore.instance
                                                 .collection('users')
@@ -170,9 +167,12 @@ class _SignUpState extends State<SignUp> {
                                                 .set({
                                               "uid": user.uid,
                                               "email": email,
+                                              "name": fname+" "+lname,
                                             });
+                                          }catch(e){
 
-                                          });
+                                          }
+
                                           Fluttertoast.showToast(
                                               msg: "User added successfully");
                                           Navigator.pushReplacement(

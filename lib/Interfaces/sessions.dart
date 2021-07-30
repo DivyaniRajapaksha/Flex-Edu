@@ -64,7 +64,9 @@ class DetailsScreen extends StatelessWidget {
                         ),
                         SeassionCard(
                           seassionNum: 2,
-                          press: () {},
+                          press: () {
+                            Naviga
+                          },
                         ),
                         SeassionCard(
                           seassionNum: 3,
